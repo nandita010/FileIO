@@ -15,7 +15,7 @@ public class WriteOnce {
         System.out.println("Enter a name to save: ");
         String name=sc.nextLine().trim();
 
-        try(PrintWriter out = new PrintWriter(new FileWriter(fileName, true)))
+        try(PrintWriter out = new PrintWriter(new FileWriter(fileName, false)))
         {
             out.println(name);
             System.out.println("Saved to "  + fileName);
